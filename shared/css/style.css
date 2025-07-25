@@ -1,0 +1,115 @@
+body.login-body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fce3ec, #f9f7f7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.login-container h2 {
+  color: #d67fa8;
+  margin-bottom: 20px;
+}
+
+.login-container input,
+.login-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #d67fa8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #b0628b;
+}
+body.dashboard-body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fce3ec, #f9f7f7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dashboard {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  width: 350px;
+}
+
+.dashboard h1 {
+  color: #d67fa8;
+  margin-bottom: 30px;
+}
+
+.dashboard button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  background-color: #d67fa8;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dashboard button:hover {
+  background-color: #b0628b;
+}
+.checkout-body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fce3ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.checkout-container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#payBtn {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #d67fa8;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+#payBtn:hover {
+  background-color: #b0628b;
+}

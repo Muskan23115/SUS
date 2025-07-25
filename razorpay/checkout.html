@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | Razorpay</title>
+  <link rel="stylesheet" href="../shared/css/style.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body class="checkout-body">
+  <div class="checkout-container">
+    <h1>Processing Payment...</h1>
+    <p id="courseDetails"></p>
+    <button id="payBtn">Pay with Razorpay</button>
+  </div>
+
+  <script>
+    // Parse query params
+    const queryParams = new URLSearchParams(window.location.search);
+    const courseId = queryParams.get('courseId');
+    const price = parseInt(queryParams.get('price'));
+
+    document.getElementById("courseDetails").textContent =
+      `Course ID: ${courseId} | Amount: ₹${price}`;
+
+    document.getElementById("payBtn").addEventListener("click", () => {
+      const options = {
+        key: "rzp_test_YourKeyHere", // ⚠️ Replace with your Razorpay test key
+        amount: price * 100, // Amount in paise
+        currency: "INR",
+        name: "SUS LMS",
+        description: "Course Purchase",
+        image: "https://your-logo-url.com/logo.png", // Optional
+        handler: function (response) {
+          alert("✅ Payment Successful!\nPayment ID: " + response.razorpay_payment_id);
+
+          // Simulate distribution
+          const teacherShare = price * 0.9;
+          const adminFee = price * 0.1;
+          alert(`💰 ₹${teacherShare.toFixed(2)} sent to Teacher\n💼 ₹${adminFee.toFixed(2)} kept by Admin`);
+
+          // Redirect back to student dashboard
+          window.location.href = "/student/dashboard.html";
+        },
+        prefill: {
+          name: "Student Name",
+          email: "student@example.com"
+        },
+        theme: {
+          color: "#d67fa8"
+        }
+      };
+
+      const rzp = new Razorpay(options);
+      rzp.open();
+    });
+  </script>
+</body>
+</html>

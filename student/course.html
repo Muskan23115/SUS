@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Courses – SUS LMS</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #f6f7fb;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #384C65;
+    }
+
+    .courses-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-card img {
+      width: 100%;
+      border-radius: 12px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .course-title {
+      font-size: 1.2rem;
+      margin: 0.8rem 0 0.4rem;
+      color: #121524;
+    }
+
+    .course-desc {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .course-price {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      color: #485F88;
+    }
+
+    .view-btn {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #9DACCC;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .view-btn:hover {
+      background: #485F88;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Available Courses</h1>
+
+  <div class="courses-container">
+    <div class="course-card">
+      <img src="https://source.unsplash.com/400x250/?coding" alt="Course">
+      <div class="course-title">Full Stack Development</div>
+      <div class="course-desc">Learn HTML, CSS, JS, React & Node.js from scratch.</div>
+      <div class="course-price">₹1999</div>
+      <a href="course-detail.html"><button class="view-btn">View Course</button></a>
+    </div>
+
+    <div class="course-card">
+      <img src="https://source.unsplash.com/400x250/?python" alt="Course">
+      <div class="course-title">Python for Data Science</div>
+      <div class="course-desc">Master Python and build ML models in real time.</div>
+      <div class="course-price">₹1499</div>
+      <a href="course-detail.html"><button class="view-btn">View Course</button></a>
+    </div>
+  </div>
+
+</body>
+</html>
